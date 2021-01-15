@@ -31,7 +31,6 @@ var licLink='';
 function renderLicenseLink(license) {
 
   if(license === 'MIT') {
-    console.log("in link MIT");
     licLink = 'https://www.mit.edu/~amini/LICENSE.md';
     return licLink;
   } else if (license === 'Apache') {
@@ -113,12 +112,11 @@ ${data.contributor}
 ${data.test}
 
 ## Questions
-If there are any questions about this **${data.title}** application, then please feel free to contact me
-<div>at either my GitHub profile</div>
-
+If there are any questions about this **${data.title}** application, then please feel
+ free to contact me at either my GitHub profile
 **https://github.com/${data.githubuser}**
 
-or you can contact me at my the following email address:  **${data.email}**
+or you can contact me at the following email address:  **${data.email}**
 `;
 }
 
