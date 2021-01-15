@@ -1,42 +1,37 @@
-![License Badge](https://img.shields.io/badge/license-BSD-green)
-
 # Readme Generator
 
 ## Description
 
-Creates a readme file from the command line using Node.  User is prompted for various sections and inputs.
-
-## Table of Contents
-
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
-
+This project utilizes Node.js to create a professional looking readme file based upon user inputs.  The application asks the user a series of questions for which the supplied answers are used to construct the readme sections.  The application asks for a title, installation instructions, usage instructions, a license type, contributions, any applicable tests and finally email and GitHub username in order to create the Readme.
 
 ## Installation
-None
+
+* Copy the folder 'generatorCode' containing all the application files locally to one's machine.
+* Install node.js to computer, if not already present.
+    * Node.js can be installed from [here](#https://nodejs.org/en/)
+* In a terminal window, install 'inquirer' using npm
+    * **npm install inquirer --save**
 
 ## Usage
-None
 
-## License
-Copyright &copy; John Toth 2021
+This application requires Node.js to be installed.  It also requires the user to have installed 'Inquirer' via the node package manager (npm).  Once these items have been installed, the user can launch the application from a terminal window as follows:
 
-The Readme Generator application is covered under the [GNU](https://www.gnu.org/licenses/gpl-3.0.en.html) license.
+**node index.js**
 
-## Contributing
-John Toth
+The application will proceed to ask the user a series of questions in order to build the readme file.
 
-## Tests
-N/A
+## Video Walkthrough
 
-## Questions
-If there are any questions about this **Readme Generator** application, then please feel free to contact me
-<div>at either my GitHub profile</div>
+Due to there being no front end to this project that a user can open in a browser, please view the following video link to get a feel for how the command line application is executed and types of inputs required by the user in order to generate a professional Readme.md file.
 
-https://github.com/jtoth7824
+https://docs.google.com/document/d/1sLC4Bo5_rnkovg24yekHRdtajDnv_BVNohqsmSqvJyo/edit?usp=sharing
 
-or you can contact me at my the following email address:  **jtoth7824@gmail.com**
+## Repository Link
+
+Direct link to repository:  https://github.com/jtoth7824/readmeGenerator
+
+## Sample Output Link
+
+The following link shows a sample Readme.md file generated with this application
+
+https://github.com/jtoth7824/readmeGenerator/blob/main/sampleReadmeOutput.md
