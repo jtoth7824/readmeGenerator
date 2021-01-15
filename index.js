@@ -60,18 +60,23 @@ const questions = [
 ];
 
 // Function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+
+    fs.writeFile(fileName, generateMarkdown(data), (err) =>
+    err ? console.error(err) : console.log('Success'));
+}
 
 // Function to initialize app
 function init() {
 
     const promptUser = () => inquirer.prompt(questions);
+    const filename = 'sampleReadmeOutput.md';
 
     promptUser()
 //      .then((response) => writeFileAsync('README.md', generateMarkdown(response)))
-//    .then((response) => fs.writeFile('README.md', generateMarkdown(response)))
-    .then((response) => fs.writeFile('README.md', generateMarkdown(response), (err) =>
-   err ? console.error(err) : console.log('Success!') ));
+        .then((response) => writeToFile(filename, response));
+//    .then((response) => fs.writeFile('sampleReadmeOutput.md', generateMarkdown(response), (err) =>
+//   err ? console.error(err) : console.log('Success!') ));
 //      .catch((err) => console.error(err));
 }
 

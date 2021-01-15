@@ -66,7 +66,7 @@ function renderLicenseSection(title, license) {
     // license link exists, then build license section
     licSection = `Copyright &copy; John Toth 2021
 
-The ${title} application is covered under the [${license}](${licLink}) license.`
+The **${title}** application is covered under the [${license}](${licLink}) license.`
   }
 }
 
@@ -116,7 +116,7 @@ ${data.test}
 If there are any questions about this **${data.title}** application, then please feel free to contact me
 <div>at either my GitHub profile</div>
 
-https://github.com/${data.githubuser}
+**https://github.com/${data.githubuser}**
 
 or you can contact me at my the following email address:  **${data.email}**
 `;
