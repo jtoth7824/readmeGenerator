@@ -62,6 +62,7 @@ function renderLicenseSection(title, license) {
     licSection = ``;
   } else {
     licSection = `Copyright &copy; John Toth 2021
+
 The ${title} application is covered under the [${license}](${licLink}) license.`
   }
 }
@@ -106,8 +107,12 @@ ${data.contributor}
 ${data.test}
 
 ## Questions
-If there are any question about this ${data.title} application, then please feel free to contact me at either my GitHub profile https://${data.githubuser} or you can contact me at my the following email address:  ${data.email}
+<div>If there are any questions about this **${data.title}** application, then please feel free to contact me</div>
+<div>at either my GitHub profile</div>
 
+https://${data.githubuser}
+
+<div>or you can contact me at my the following email address:  ${data.email}</div>
 `;
 }
 
