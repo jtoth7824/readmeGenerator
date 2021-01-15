@@ -1,14 +1,15 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const markdown = require('./generateMarkdown.js');
 const fs = require('fs');
 
-const util = require('util');
+//const util = require('util');
+// import/require markdown function in other js file
 const generateMarkdown = require('./generateMarkdown.js');
 
-const writeFileAsync = util.promisify(fs.writeFile);
+//const writeFileAsync = util.promisify(fs.writeFile);
 
-// TODO: Create an array of questions for user input
+// Create an array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -58,19 +59,20 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
 
     const promptUser = () => inquirer.prompt(questions);
 
     promptUser()
-//    .then((data) => console.log(data))
-      .then((response) => writeFileAsync('README.md', generateMarkdown(response)))
-//     .then(() => console.log('Successfully wrote to index.html'))
-      .catch((err) => console.error(err));
+//      .then((response) => writeFileAsync('README.md', generateMarkdown(response)))
+//    .then((response) => fs.writeFile('README.md', generateMarkdown(response)))
+    .then((response) => fs.writeFile('README.md', generateMarkdown(response), (err) =>
+   err ? console.error(err) : console.log('Success!') ));
+//      .catch((err) => console.error(err));
 }
 
 // Function call to initialize app

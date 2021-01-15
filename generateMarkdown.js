@@ -1,10 +1,10 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 var badge='';
 
+// Function that returns a license badge based on which license is passed in
+// If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  console.log("license is: " + license);
-  if(license === 'MIT') {console.log("in MIT");
+
+  if(license === 'MIT') {
     badge = 'https://img.shields.io/badge/license-MIT-green';
     return badge;
   } else if (license === 'Apache') {
@@ -26,10 +26,10 @@ function renderLicenseBadge(license) {
 }
 
 var licLink='';
-// TODO: Create a function that returns the license link
+// Function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  console.log("license link: " + license);
+
   if(license === 'MIT') {
     console.log("in link MIT");
     licLink = 'https://www.mit.edu/~amini/LICENSE.md';
@@ -39,7 +39,7 @@ function renderLicenseLink(license) {
     return licLink;
   } else if(license === 'GNU') {
     licLink = 'https://www.gnu.org/licenses/gpl-3.0.en.html';
-    return licLInk;
+    return licLink;
   } else if(license === 'BSD') {
     licLink = 'https://opensource.org/licenses/BSD-3-Clause';
     return licLink;
@@ -53,26 +53,32 @@ function renderLicenseLink(license) {
 }
 
 var licSection = '';
-// TODO: Create a function that returns the license section of README
+// Function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(title, license) {
 
+  // call to retrieve license link
   renderLicenseLink(license);
+  // if no license link return empty string
   if(licLink==='') {
     licSection = ``;
   } else {
+    // license link exists, then build license section
     licSection = `Copyright &copy; John Toth 2021
 
 The ${title} application is covered under the [${license}](${licLink}) license.`
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
 function generateMarkdown(data) {
+
+  // call to retrieve appropriate badge for license selected
   renderLicenseBadge(data.license);
+  // call to build License section in readme
   renderLicenseSection(data.title, data.license);
 
-console.log(data);
+  // return the markdown of the readme
   return `![License Badge](${badge})
 
 # ${data.title}
@@ -107,13 +113,14 @@ ${data.contributor}
 ${data.test}
 
 ## Questions
-<div>If there are any questions about this **${data.title}** application, then please feel free to contact me</div>
+If there are any questions about this **${data.title}** application, then please feel free to contact me
 <div>at either my GitHub profile</div>
 
-https://${data.githubuser}
+https://github.com/${data.githubuser}
 
-<div>or you can contact me at my the following email address:  ${data.email}</div>
+or you can contact me at my the following email address:  **${data.email}**
 `;
 }
 
+// export function
 module.exports = generateMarkdown;
