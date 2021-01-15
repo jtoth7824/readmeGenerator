@@ -8,7 +8,7 @@ This project utilizes Node.js to create a professional looking readme file based
 
 * Copy the folder 'generatorCode' containing all the application files locally to one's machine.
 * Install node.js to computer, if not already present.
-    * Node.js can be installed from [here](#https://nodejs.org/en/)
+    * Node.js can be installed from [here](https://nodejs.org/en/)
 * In a terminal window, install 'inquirer' using npm
     * **npm install inquirer --save**
 
