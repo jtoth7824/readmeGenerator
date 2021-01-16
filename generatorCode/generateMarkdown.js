@@ -7,12 +7,10 @@ function renderLicenseBadge(license) {
        return 'https://img.shields.io/badge/license-MIT-green';
     case 'Apache':
       return 'https://img.shields.io/badge/license-Apache-blue';
-    case 'GNU':
-      return 'https://img.shields.io/badge/license-BSD-green';
+    case 'GNU GPL':
+      return 'https://img.shields.io/badge/license-GPL-blue';
     case 'BSD':
       return 'https://img.shields.io/badge/license-BSD-green';
-    case 'GPL':
-      return 'https://img.shields.io/badge/license-GPL-blue';
     default:
       return '';
   }
@@ -27,12 +25,10 @@ function renderLicenseLink(license) {
        return 'https://www.mit.edu/~amini/LICENSE.md';
     case 'Apache':
       return 'https://www.apache.org/licenses/LICENSE-2.0.txt';
-    case 'GNU':
+    case 'GNU GPL':
       return 'https://www.gnu.org/licenses/gpl-3.0.en.html';
     case 'BSD':
       return 'https://opensource.org/licenses/BSD-3-Clause';
-    case 'GPL':
-      return 'https://www.gnu.org/licenses/gpl-3.0.en.html';
     default:
       return '';
   }
@@ -111,7 +107,9 @@ ${data.description}
 ${data.installation}
 
 ## Usage
-${data.usage}
+To execute this application, perform the following command:
+
+**${data.usage}**
 
 ## License
 ${licSection}
@@ -125,9 +123,12 @@ ${data.test}
 ## Questions
 If there are any questions about this **${data.title}** application, then please feel
  free to contact me at either my GitHub profile
+
 **https://github.com/${data.githubuser}**
 
-or you can contact me at the following email address:  **${data.email}**
+or you can contact me at the following email address:
+
+**${data.email}**
 `;
 }
 

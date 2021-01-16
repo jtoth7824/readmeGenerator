@@ -1,10 +1,10 @@
-![License Badge](https://img.shields.io/badge/license-Apache-blue)
+![License Badge](https://img.shields.io/badge/license-GPL-blue)
 
 # Readme Generator
 
 ## Description
 
-Creates a readme file from command line using Node.js.  User inputs are utilized to build the appropriate sections in the Readme file
+Creates a readme file from command line using Node.js.  User inputs are utilized to build the appropriate sections in the Readme file.
 
 ## Table of Contents
 
@@ -20,12 +20,14 @@ Creates a readme file from command line using Node.js.  User inputs are utilized
 None
 
 ## Usage
-To execute this application, perform the following command:  node index.js
+To execute this application, perform the following command:
+
+**node index.js**
 
 ## License
 Copyright &copy; John Toth 2021
 
-The **Readme Generator** application is covered under the [Apache](https://www.apache.org/licenses/LICENSE-2.0.txt) license.
+The **Readme Generator** application is covered under the [GNU GPL](https://www.gnu.org/licenses/gpl-3.0.en.html) license.
 
 ## Contributions
 If interested in contributing to the code base you can:
@@ -34,11 +36,14 @@ If interested in contributing to the code base you can:
 * [Review code changes](https://github.com/jtoth7824/readmeGenerator/pulls)
 
 ## Tests
-None at this time.
+N/A
 
 ## Questions
 If there are any questions about this **Readme Generator** application, then please feel
  free to contact me at either my GitHub profile
+
 **https://github.com/jtoth7824**
 
-or you can contact me at the following email address:  **jtoth7824@gmail.com**
+or you can contact me at the following email address:
+
+**jtoth7824@gmail.com**
