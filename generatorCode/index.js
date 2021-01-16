@@ -32,9 +32,10 @@ const questions = [
         name: 'usage',
     },
     {
-        type: 'input',
-        message: 'Enter contributor names: ',
-        name: 'contributor',
+        type: 'checkbox',
+        message: 'Select the types of contributions: ',
+        choices: ['Bugs/Features', 'Review code'],
+        name: 'contributions',
     },
     {
         type: 'input',

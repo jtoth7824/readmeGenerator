@@ -4,7 +4,7 @@
 
 ## Description
 
-Create a readme file from command inputs
+Creates a readme file from the command line using Node.  User is prompted for various sections and inputs.
 
 ## Table of Contents
 
@@ -17,24 +17,21 @@ Create a readme file from command inputs
 
 
 ## Installation
-ljasdl;fkjadlsjf
+None
 
 ## Usage
-none
+None
 
 ## License
 Copyright &copy; John Toth 2021
 
 The **Readme Generator** application is covered under the [MIT](https://www.mit.edu/~amini/LICENSE.md) license.
 
-## Contributions
-If interested in contributing to the code base you can:
-
-* [Submit bugs and feature requests](https://github.com/jtoth7824/readmeGenerator/issues)
-* [Review code changes](https://github.com/jtoth7824/readmeGenerator/pulls)
+## Contributing
+John Toth
 
 ## Tests
-none
+N/A
 
 ## Questions
 If there are any questions about this **Readme Generator** application, then please feel

@@ -55,6 +55,28 @@ The **${title}** application is covered under the [${license}](${licLink}) licen
   }
 }
 
+//let allOptions = '';
+
+function renderContributions(username, choices) {
+  let allOptions = '';
+  let options = '';
+
+  for(const value of choices) {
+    console.log(value);
+    if(value === 'Bugs/Features') {
+      options = `* [Submit bugs and feature requests](https://github.com/${username}/readmeGenerator/issues)`;
+    }
+    if(value === 'Review code') {
+      allOptions = `${options}
+* [Review code changes](https://github.com/${username}/readmeGenerator/pulls)`;
+    }
+  }
+
+  return `If interested in contributing to the code base you can:
+
+${allOptions}`
+}
+
 // Function to generate markdown for README
 function generateMarkdown(data) {
 
@@ -62,6 +84,9 @@ function generateMarkdown(data) {
   let badge = renderLicenseBadge(data.license);
   // call to build License section in readme
   let licSection = renderLicenseSection(data.title, data.license);
+
+  // call to build Contributions section for README
+  let contSection = renderContributions(data.githubuser, data.contributions)
 
   // return the markdown of the readme
   return `![License Badge](${badge})
@@ -77,7 +102,7 @@ ${data.description}
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Contributing](#contributing)
+* [Contributions](#contributions)
 * [Tests](#tests)
 * [Questions](#questions)
 
@@ -91,8 +116,8 @@ ${data.usage}
 ## License
 ${licSection}
 
-## Contributing
-${data.contributor}
+## Contributions
+${contSection}
 
 ## Tests
 ${data.test}
