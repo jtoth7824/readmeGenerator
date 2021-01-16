@@ -1,69 +1,55 @@
-var badge='';
-
 // Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
 
-  if(license === 'MIT') {
-    badge = 'https://img.shields.io/badge/license-MIT-green';
-    return badge;
-  } else if (license === 'Apache') {
-    badge = 'https://img.shields.io/badge/license-Apache-blue';
-    return badge;
-  } else if (license === 'GNU') {
-    badge = 'https://img.shields.io/badge/license-BSD-green';
-    return badge;
-  } else if (license === 'BSD') {
-    badge = 'https://img.shields.io/badge/license-BSD-green';
-    return badge;
-  } else if (license === 'GPL') { 
-    badge = 'https://img.shields.io/badge/license-GPL-blue';
-    return badge;
-  } else {
-    badge = "";
-    return badge;
+  switch(license) {
+    case 'MIT':
+       return 'https://img.shields.io/badge/license-MIT-green';
+    case 'Apache':
+      return 'https://img.shields.io/badge/license-Apache-blue';
+    case 'GNU':
+      return 'https://img.shields.io/badge/license-BSD-green';
+    case 'BSD':
+      return 'https://img.shields.io/badge/license-BSD-green';
+    case 'GPL':
+      return 'https://img.shields.io/badge/license-GPL-blue';
+    default:
+      return '';
   }
 }
 
-var licLink='';
 // Function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
 
-  if(license === 'MIT') {
-    licLink = 'https://www.mit.edu/~amini/LICENSE.md';
-    return licLink;
-  } else if (license === 'Apache') {
-    licLink = 'https://www.apache.org/licenses/LICENSE-2.0.txt';
-    return licLink;
-  } else if(license === 'GNU') {
-    licLink = 'https://www.gnu.org/licenses/gpl-3.0.en.html';
-    return licLink;
-  } else if(license === 'BSD') {
-    licLink = 'https://opensource.org/licenses/BSD-3-Clause';
-    return licLink;
-  } else if(license === 'GPL') {
-    licLink = 'https://www.gnu.org/licenses/gpl-3.0.en.html';
-    return licLink;
-  } else {
-    licLink = '';
-    return licLink;
+  switch(license) {
+    case 'MIT':
+       return 'https://www.mit.edu/~amini/LICENSE.md';
+    case 'Apache':
+      return 'https://www.apache.org/licenses/LICENSE-2.0.txt';
+    case 'GNU':
+      return 'https://www.gnu.org/licenses/gpl-3.0.en.html';
+    case 'BSD':
+      return 'https://opensource.org/licenses/BSD-3-Clause';
+    case 'GPL':
+      return 'https://www.gnu.org/licenses/gpl-3.0.en.html';
+    default:
+      return '';
   }
 }
 
-var licSection = '';
 // Function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(title, license) {
 
   // call to retrieve license link
-  renderLicenseLink(license);
+  let licLink = renderLicenseLink(license);
   // if no license link return empty string
   if(licLink==='') {
-    licSection = ``;
+    return '';
   } else {
     // license link exists, then build license section
-    licSection = `Copyright &copy; John Toth 2021
+    return `Copyright &copy; John Toth 2021
 
 The **${title}** application is covered under the [${license}](${licLink}) license.`
   }
@@ -73,9 +59,9 @@ The **${title}** application is covered under the [${license}](${licLink}) licen
 function generateMarkdown(data) {
 
   // call to retrieve appropriate badge for license selected
-  renderLicenseBadge(data.license);
+  let badge = renderLicenseBadge(data.license);
   // call to build License section in readme
-  renderLicenseSection(data.title, data.license);
+  let licSection = renderLicenseSection(data.title, data.license);
 
   // return the markdown of the readme
   return `![License Badge](${badge})
