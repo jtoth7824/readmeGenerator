@@ -1,31 +1,31 @@
-![License Badge](https://img.shields.io/badge/license-MIT-green)
+![License Badge](https://img.shields.io/badge/license-Apache-blue)
 
 # Readme Generator
 
 ## Description
 
-Create a readme file from command inputs
+Creates a readme file from command line using Node.js.  User inputs are utilized to build the appropriate sections in the Readme file
 
 ## Table of Contents
 
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Contributing](#contributing)
+* [Contributions](#contributions)
 * [Tests](#tests)
 * [Questions](#questions)
 
 
 ## Installation
-ljasdl;fkjadlsjf
+None
 
 ## Usage
-none
+To execute this application, perform the following command:  node index.js
 
 ## License
 Copyright &copy; John Toth 2021
 
-The **Readme Generator** application is covered under the [MIT](https://www.mit.edu/~amini/LICENSE.md) license.
+The **Readme Generator** application is covered under the [Apache](https://www.apache.org/licenses/LICENSE-2.0.txt) license.
 
 ## Contributions
 If interested in contributing to the code base you can:
@@ -34,7 +34,7 @@ If interested in contributing to the code base you can:
 * [Review code changes](https://github.com/jtoth7824/readmeGenerator/pulls)
 
 ## Tests
-none
+None at this time.
 
 ## Questions
 If there are any questions about this **Readme Generator** application, then please feel

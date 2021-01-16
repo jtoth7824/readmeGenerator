@@ -55,26 +55,26 @@ The **${title}** application is covered under the [${license}](${licLink}) licen
   }
 }
 
-//let allOptions = '';
-
+// This function creates the contributions section based upon which checkbox options were selected by user
 function renderContributions(username, choices) {
-  let allOptions = '';
   let options = '';
 
+  // loop through all selected choices
   for(const value of choices) {
-    console.log(value);
+    // if Bugs were chosen then add appropriate link to section
     if(value === 'Bugs/Features') {
       options = `* [Submit bugs and feature requests](https://github.com/${username}/readmeGenerator/issues)`;
     }
+    // if Review code was chosen then add appropriate link to section
     if(value === 'Review code') {
-      allOptions = `${options}
+      options = `${options}
 * [Review code changes](https://github.com/${username}/readmeGenerator/pulls)`;
     }
   }
-
+  // return contributions section
   return `If interested in contributing to the code base you can:
 
-${allOptions}`
+${options}`
 }
 
 // Function to generate markdown for README
