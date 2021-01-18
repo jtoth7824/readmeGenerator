@@ -3,11 +3,8 @@ const inquirer = require('inquirer');
 const markdown = require('./generateMarkdown.js');
 const fs = require('fs');
 
-//const util = require('util');
 // import/require markdown function in other js file
 const generateMarkdown = require('./generateMarkdown.js');
-
-//const writeFileAsync = util.promisify(fs.writeFile);
 
 // Create an array of questions for user input
 const questions = [
@@ -71,14 +68,12 @@ function writeToFile(fileName, data) {
 function init() {
 
     const promptUser = () => inquirer.prompt(questions);
+    //set filename & location to be parent directory
     const filename = '../sampleReadmeOutput.md';
 
     promptUser()
-//      .then((response) => writeFileAsync('README.md', generateMarkdown(response)))
+        // take the user responses and write the inputs to the readme file
         .then((response) => writeToFile(filename, response));
-//    .then((response) => fs.writeFile('sampleReadmeOutput.md', generateMarkdown(response), (err) =>
-//   err ? console.error(err) : console.log('Success!') ));
-//      .catch((err) => console.error(err));
 }
 
 // Function call to initialize app
