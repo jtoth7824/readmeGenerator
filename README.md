@@ -24,7 +24,7 @@ The application will proceed to ask the user a series of questions in order to b
 
 Due to there being no front end to this project that a user can open in a browser, please view the following video link to get a feel for how the command line application is executed and types of inputs required by the user in order to generate a professional Readme.md file.
 
-https://docs.google.com/document/d/1sLC4Bo5_rnkovg24yekHRdtajDnv_BVNohqsmSqvJyo/edit?usp=sharing
+https://drive.google.com/drive/folders/1EZFwV5XinNfC6tWWgtUtjtHI3ROTsBC5
 
 ## Repository Link
 
