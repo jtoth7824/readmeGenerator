@@ -71,7 +71,7 @@ function writeToFile(fileName, data) {
 function init() {
 
     const promptUser = () => inquirer.prompt(questions);
-    const filename = 'sampleReadmeOutput.md';
+    const filename = '../sampleReadmeOutput.md';
 
     promptUser()
 //      .then((response) => writeFileAsync('README.md', generateMarkdown(response)))
