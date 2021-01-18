@@ -14,7 +14,7 @@ This project utilizes Node.js to create a professional looking readme file based
 
 ## Usage
 
-This application requires Node.js to be installed.  It also requires the user to have installed 'Inquirer' via npm.  (See * [Installation](#installation))  Once these items have been installed, the user can launch the application from a terminal window as follows:
+This application requires Node.js to be installed.  It also requires the user to have installed 'Inquirer' via npm.  (See [Installation](#installation) section.)  Once these items have been installed, the user can launch the application from a terminal window as follows:
 
 **node index.js**
 
