@@ -34,4 +34,4 @@ Direct link to repository:  https://github.com/jtoth7824/readmeGenerator
 
 The following link shows a sample Readme.md file generated with this application
 
-https://github.com/jtoth7824/readmeGenerator/blob/main/generatorCode/sampleReadmeOutput.md
+https://github.com/jtoth7824/readmeGenerator/blob/main/sampleReadmeOutput.md
